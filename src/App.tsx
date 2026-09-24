@@ -139,6 +139,16 @@ function Workshop() {
           </Fragment>
         ))}
       </main>
+      <aside className="mx-auto max-w-6xl px-5 pt-10 sm:px-8">
+        <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 px-5 py-4 text-sm leading-relaxed text-amber-950 dark:text-amber-100">
+          <p className="font-semibold">Después de cada cambio</p>
+          <p className="mt-1">
+            Para que lo nuevo se vea en la URL pública, pídele a Cursor que publique en Vercel y que
+            haga commit y push en Git. Así queda todo guardado en remoto y publicado en la URL
+            pública.
+          </p>
+        </div>
+      </aside>
       <footer className="mx-auto max-w-6xl px-5 py-10 text-sm text-zinc-500 sm:px-8">
         EAE Barcelona · Josefina Serrano Minetto · Vibecoding · 4 horas
       </footer>

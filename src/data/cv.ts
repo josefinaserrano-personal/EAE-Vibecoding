@@ -4,7 +4,9 @@ import despegarLogo from "../assets/logos/despegar.svg"
 import mercadoLibreLogo from "../assets/logos/mercadolibre.svg"
 import sapLogo from "../assets/logos/sap.svg"
 import semrushLogo from "../assets/logos/semrush.svg"
+import serranoStudioLogo from "../assets/seranostudio.jpeg"
 import utdtLogo from "../assets/logos/utdt.svg"
+import dauphineLogo from "../assets/logos/dauphine.png"
 
 export const cvPath = "/cv"
 
@@ -161,6 +163,7 @@ export const jobs: Job[] = [
     id: "serrano-studio",
     role: "Founder & Tech Consultant",
     org: "Serrano Studio",
+    logo: serranoStudioLogo,
     period: "Abr 2025 — presente",
     place: "Barcelona · Remote",
     summary:
@@ -272,6 +275,7 @@ export const education: Education[] = [
     period: "2018 — 2019",
     detail:
       "Econometría, ciencia de datos y tecnología aplicada a negocios. Quería explicar con datos lo que parecía casualidad.",
+    logo: utdtLogo,
   },
   {
     title: "Licenciatura en Economía",
@@ -282,7 +286,8 @@ export const education: Education[] = [
   {
     title: "Erasmus",
     period: "2016",
-    detail: "París. Perfeccioné el francés y sumé una mirada internacional.",
+    detail: "Université Paris Dauphine. Perfeccioné el francés y sumé una mirada internacional.",
+    logo: dauphineLogo,
   },
 ]
 
