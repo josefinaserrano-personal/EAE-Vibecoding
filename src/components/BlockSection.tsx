@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import type { AccordionItem, Block, Link as ResourceLink, PracticeStep } from "../data/workshop"
 import { ArchitectureDiagram } from "./ArchitectureDiagram"
 import { CaseStudy } from "./CaseStudy"
+import { CursorCheatSheet } from "./CursorCheatSheet"
 import { UiShowcase } from "./UiShowcase"
 
 function PointAccordion({ items }: { items: AccordionItem[] }) {
@@ -150,7 +151,7 @@ export function BlockSection({ block }: { block: Block }) {
 
         {block.caseStudy && <CaseStudy study={block.caseStudy} />}
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-2">
+        <div className={`mt-10 grid gap-5 ${block.extra === "cursor" ? "" : "lg:grid-cols-2"}`}>
           <article className="rounded-2xl border border-zinc-200 border-t-4 border-t-indigo-500 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900/50">
             <div className="flex items-center justify-between gap-3">
               <span className="inline-flex items-center rounded-full border border-indigo-500/25 bg-indigo-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-indigo-800 uppercase dark:text-indigo-200">
@@ -190,6 +191,7 @@ export function BlockSection({ block }: { block: Block }) {
                 </li>
               ))}
             </ul>
+            {block.extra === "cursor" && <CursorCheatSheet />}
           </article>
 
           <article className="rounded-2xl border border-zinc-200 border-t-4 border-t-emerald-500 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900/50">

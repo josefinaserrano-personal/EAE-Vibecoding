@@ -18,7 +18,7 @@ export type Point = {
 
 export type PracticeStep = string | { text: string; link?: Link; prompt?: string }
 
-export type BlockExtra = "showcase" | "architecture"
+export type BlockExtra = "showcase" | "architecture" | "cursor"
 
 export type CaseBeat = {
   heading: string
@@ -67,7 +67,7 @@ export const workshop = {
   teacher: "Josefina Serrano Minetto",
   badge: "Workshop Práctico • EAE Barcelona • 4 Horas",
   subtitle:
-    "Cómo transformar tus notas de relevamiento en un prototipo funcional publicado en 30 minutos sin escribir código.",
+    "Cómo transformar tus notas de relevamiento en un prototipo funcional rápidamente sin escribir código.",
 }
 
 export const supabaseFormPrompt = `Conecta el formulario de contacto a Supabase.
@@ -220,6 +220,7 @@ export const blocks: Block[] = [
     title: "Demo de Lovable vs. Inicio del Proyecto en Cursor",
     explanationMinutes: "10 min",
     practiceMinutes: "20 min",
+    extra: "cursor",
     explanation: [
       {
         heading: "Demo en vivo de Lovable (5 min)",
@@ -242,6 +243,14 @@ export const blocks: Block[] = [
       {
         heading: "Transición a Cursor",
         body: "Construiremos en Cursor por el control total, la edición local y el despliegue directo, sin intermediarios.",
+      },
+      {
+        heading: "La pantalla de Cursor",
+        body: "Antes del primer prompt, recorremos la pantalla con la chuleta. Son cinco zonas: los archivos, la ventana central (código o navegador), la terminal, el chat y, a la derecha del chat, el listado de agentes. Cada una hace una sola cosa.",
+      },
+      {
+        heading: "Un agente por problema",
+        body: "Abrimos un agente nuevo cada vez que cambia el problema. Si seguimos en el mismo chat, arrastra todo lo anterior: mezcla instrucciones viejas, se confunde y gasta más. Un agente por problema empieza limpio y solo ve lo que necesita para esa tarea.",
       },
       {
         heading: "Modos de trabajo en Cursor",
