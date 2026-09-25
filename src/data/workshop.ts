@@ -170,7 +170,7 @@ export const blocks: Block[] = [
       beats: [
         {
           heading: "Credenciales",
-          body: "Hace 3 años trabajo como freelancer en diseño de experiencia de usuario y desarrollo frontend. También lidero equipos que construyen aplicaciones complejas a partir de mis diseños.",
+          body: "Hace 2 años trabajo como freelancer en diseño de experiencia de usuario y desarrollo frontend. También lidero equipos que construyen aplicaciones complejas a partir de mis diseños.",
         },
         {
           heading: "De idea a producto",
