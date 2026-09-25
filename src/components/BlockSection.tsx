@@ -75,7 +75,7 @@ async function writeClipboard(body: string) {
   }
 }
 
-function CopyPrompt({ text }: { text: string }) {
+function CopyPrompt({ text, label = "Prompt para Cursor" }: { text: string; label?: string }) {
   const [copied, setCopied] = useState<"ok" | "error" | null>(null)
 
   useEffect(() => {
@@ -87,7 +87,7 @@ function CopyPrompt({ text }: { text: string }) {
   return (
     <div className="mt-3 rounded-xl border border-zinc-200 dark:border-zinc-700">
       <div className="flex items-center justify-between gap-3 px-3 py-2">
-        <span className="text-xs font-semibold text-zinc-500">Prompt para Cursor</span>
+        <span className="text-xs font-semibold text-zinc-500">{label}</span>
         <button
           type="button"
           onClick={async () => setCopied((await writeClipboard(text)) ? "ok" : "error")}
@@ -216,7 +216,7 @@ export function BlockSection({ block }: { block: Block }) {
                         {step.text}
                       </p>
                       {step.link && <ResourceAnchor link={step.link} tone="emerald" />}
-                      {step.prompt && <CopyPrompt text={step.prompt} />}
+                      {step.prompt && <CopyPrompt text={step.prompt} label={step.promptLabel} />}
                     </div>
                   </li>
                 )

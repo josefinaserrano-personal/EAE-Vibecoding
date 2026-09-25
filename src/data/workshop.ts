@@ -1,3 +1,5 @@
+import { copyablePrompt } from "./cv"
+
 export type Link = {
   href: string
   label: string
@@ -16,7 +18,12 @@ export type Point = {
   accordion?: AccordionItem[]
 }
 
-export type PracticeStep = string | { text: string; link?: Link; prompt?: string }
+export type PracticeStep = string | {
+  text: string
+  link?: Link
+  prompt?: string
+  promptLabel?: string
+}
 
 export type BlockExtra = "showcase" | "architecture" | "cursor"
 
@@ -208,7 +215,11 @@ export const blocks: Block[] = [
       },
     ],
     practice: [
-      "Redacción del PRD en interacción directa con Gemini.",
+      {
+        text: "Redacción del PRD en interacción directa con Gemini.",
+        prompt: copyablePrompt,
+        promptLabel: "Prompt base",
+      },
       "Asistencia personalizada en la formulación y refinamiento del PRD de cada alumno.",
     ],
   },
