@@ -228,16 +228,21 @@ export const blocks: Block[] = [
   {
     id: "bloque-3",
     number: 3,
+    chip: "Lovable",
+    kicker: "Bloque 3 • Lovable • 01:00 – 01:10",
     start: "01:00",
-    end: "01:30",
-    title: "Demo de Lovable vs. Inicio del Proyecto en Cursor",
-    explanationMinutes: "10 min",
-    practiceMinutes: "20 min",
-    extra: "cursor",
+    end: "01:10",
+    title: "Lovable",
+    explanationMinutes: "5 min",
+    practiceMinutes: "5 min",
     explanation: [
       {
-        heading: "Demo en vivo de Lovable (5 min)",
+        heading: "Demo en vivo (5 min)",
         body: "Demostración en pantalla de cómo prototipar rápido en la nube usando Lovable: qué es y cuándo conviene usarlo.",
+        link: {
+          href: "https://lovable.dev",
+          label: "lovable.dev",
+        },
         accordion: [
           {
             title: "¿Qué es?",
@@ -253,8 +258,23 @@ export const blocks: Block[] = [
           },
         ],
       },
+    ],
+    practice: [],
+  },
+  {
+    id: "bloque-3-cursor",
+    number: 3,
+    chip: "Cursor",
+    kicker: "Bloque 3 • Cursor • 01:10 – 01:30",
+    start: "01:10",
+    end: "01:30",
+    title: "Cursor",
+    explanationMinutes: "5 min",
+    practiceMinutes: "15 min",
+    extra: "cursor",
+    explanation: [
       {
-        heading: "Transición a Cursor",
+        heading: "Por qué seguimos en Cursor",
         body: "Construiremos en Cursor por el control total, la edición local y el despliegue directo, sin intermediarios.",
       },
       {
