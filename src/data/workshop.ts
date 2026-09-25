@@ -23,6 +23,7 @@ export type PracticeStep = string | {
   link?: Link
   prompt?: string
   promptLabel?: string
+  accordion?: AccordionItem[]
 }
 
 export type BlockExtra = "showcase" | "architecture" | "cursor"
@@ -223,6 +224,14 @@ export const blocks: Block[] = [
         promptLabel: "Prompt base",
       },
       "Asistencia personalizada en la formulación y refinamiento del PRD de cada alumno.",
+      {
+        text: "Pedirle a Cursor que corra el proyecto en local.",
+        prompt: `Corre este proyecto en local para que pueda verlo en mi navegador.
+
+- Instala lo que falte y arranca el servidor de desarrollo.
+- Cuando esté listo, dime la dirección local y déjala abierta.
+- No lo publiques y no me pidas contraseñas.`,
+      },
     ],
   },
   {
@@ -321,6 +330,19 @@ export const blocks: Block[] = [
       },
     ],
     practice: [
+      {
+        text: "Elegir el modelo antes del primer prompt. Al principio usamos Grok: es el más económico y el que más rinde. Si algo no funciona y no se entiende por qué, y la tarea es muy compleja, pasamos a Opus o Fable. Los modelos más caros quedan para lo específico.",
+        accordion: [
+          {
+            title: "Grok",
+            body: "Es el más económico y el que más rinde. Lo usamos al empezar y para la mayor parte del trabajo.",
+          },
+          {
+            title: "Opus o Fable",
+            body: "Cuando algo no funciona y no se entiende por qué, y la tarea es muy compleja. Ahí conviene cambiar a Opus o a Fable, y no antes.",
+          },
+        ],
+      },
       "Creación del proyecto local en Cursor por parte de los alumnos.",
       "Pegar el PRD en modo Plan, revisar lo que escribió Cursor y hacer Build para generar la primera versión del CV web.",
     ],

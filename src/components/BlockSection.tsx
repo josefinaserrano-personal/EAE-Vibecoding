@@ -222,6 +222,7 @@ export function BlockSection({ block }: { block: Block }) {
                         {step.text}
                       </p>
                       {step.link && <ResourceAnchor link={step.link} tone="emerald" />}
+                      {step.accordion && <PointAccordion items={step.accordion} />}
                       {step.prompt && <CopyPrompt text={step.prompt} label={step.promptLabel} />}
                     </div>
                   </li>

@@ -38,6 +38,15 @@ function ZoneLabel({ index, label }: { index: number; label: string }) {
 export function CursorCheatSheet() {
   return (
     <figure className="mt-8">
+      <div
+        role="alert"
+        className="mb-4 rounded-xl border border-red-500 bg-red-500/10 px-4 py-3 text-sm leading-relaxed text-red-700 dark:bg-red-500/15 dark:text-red-300"
+      >
+        <p className="font-semibold">No compartas datos sensibles</p>
+        <p className="mt-1">
+          No pegues contraseñas, keys ni nada privado en el chat. Así se evitan riesgos de ciberseguridad.
+        </p>
+      </div>
       <figcaption className="text-sm font-medium text-indigo-700 dark:text-indigo-300">
         Chuleta · la pantalla de Cursor
       </figcaption>
