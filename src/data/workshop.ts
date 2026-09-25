@@ -53,6 +53,8 @@ export type Block = {
   extra?: BlockExtra
   caseStudy?: CaseStudy
   kind?: "bonus"
+  chip?: string
+  kicker?: string
 }
 
 export type PromptItem = {
@@ -357,7 +359,7 @@ export const blocks: Block[] = [
       },
       {
         heading: "Landing Page vs. Web App",
-        body: "Una landing estática muestra información y no recuerda nada. Una aplicación interactiva, además, persiste datos. Eso se prueba en el bonus, con el formulario del CV.",
+        body: "Una landing estática muestra información y no recuerda nada. Una aplicación interactiva, además, persiste datos. Eso queda como tarea para el hogar, con el formulario del CV.",
       },
     ],
     practice: [
@@ -442,18 +444,51 @@ export const blocks: Block[] = [
     ],
   },
   {
+    id: "bonus-qa",
+    number: 0,
+    kind: "bonus",
+    chip: "QA",
+    kicker: "Bonus • QA • 03:30 – 04:00",
+    start: "03:30",
+    end: "04:00",
+    title: "QA",
+    explanationMinutes: "10 min",
+    practiceMinutes: "10 min",
+    explanation: [
+      {
+        heading: "Qué es el QA",
+        body: "QA es Quality Assurance: revisar la página como si no la hubieras hecho. Sirve para encontrar errores, botones que no hacen lo que dicen y pasos que una persona nueva no logra completar.",
+      },
+      {
+        heading: "Por qué es necesario",
+        body: "Quien construye la página ya sabe dónde está cada cosa. Quien entra por primera vez, no. Si solo la pruebas tú, esos huecos se quedan.",
+      },
+      {
+        heading: "Haz caso a quien revisa",
+        body: "A veces nos enojamos porque la otra persona no entendió, o porque un botón nos parece clarísimo y no lo encuentra. Hoy nadie lee manuales. La aplicación o la página web tiene que entenderse de forma intuitiva. Si quien revisa se pierde, el problema está en la página, no en esa persona.",
+      },
+    ],
+    practice: [
+      "Intercambia el link de tu CV con la persona que tienes al lado.",
+      "Revisa los botones del CV de la otra persona: errores, textos que no se entienden y acciones que no se encuentran.",
+      "Anota lo que no pudo hacer sin ayuda y corrígelo. No defiendas el diseño: si no lo encontró, no estaba claro.",
+    ],
+  },
+  {
     id: "bonus-supabase",
     number: 0,
     kind: "bonus",
-    start: "03:30",
-    end: "04:00",
+    chip: "Tarea",
+    kicker: "Tarea para el hogar",
+    start: "Casa",
+    end: "Casa",
     title: "Persistencia de Datos con Supabase",
     explanationMinutes: "10 min",
     practiceMinutes: "20 min",
     explanation: [
       {
-        heading: "Opcional, si queda tiempo",
-        body: "Este bonus no forma parte de los 7 bloques. Sirve para quien quiera ver cómo un formulario deja de ser solo visual y guarda un mensaje.",
+        heading: "Tarea para el hogar",
+        body: "Esto no se hace en clase. En casa, el formulario del CV deja de ser solo visual y guarda el mensaje.",
       },
       {
         heading: "Casos de uso real",
@@ -577,7 +612,7 @@ Error o captura:
   {
     id: "supabase",
     tool: "Supabase",
-    hint: "Bonus · tabla de contactos",
+    hint: "Tarea para el hogar · tabla de contactos",
     prompts: [
       {
         id: "supabase-form",

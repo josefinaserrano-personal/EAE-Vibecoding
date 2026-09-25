@@ -23,7 +23,7 @@ export function Header() {
             {workshop.teacher}
           </span>
           <span className="mx-2 text-zinc-300 dark:text-zinc-700">·</span>
-          7 bloques · 30 minutos cada uno · bonus al final
+          7 bloques · 30 minutos cada uno · QA al cierre · Supabase en casa
         </p>
       </div>
     </section>

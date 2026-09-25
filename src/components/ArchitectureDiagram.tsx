@@ -19,7 +19,7 @@ const layers = [
     short: "La lógica",
     queEs:
       "La lógica de negocio, las reglas y los servidores detrás de escena. Decide qué se acepta y qué se responde.",
-    hoy: "Hoy Cursor escribe esa lógica. En el bonus, Supabase recibe el formulario de contacto.",
+    hoy: "Hoy Cursor escribe esa lógica. En la tarea para el hogar, Supabase recibe el formulario de contacto.",
     ejemplo:
       "La regla que guarda un mensaje completo y rechaza uno vacío, sin que el visitante vea el servidor.",
   },
@@ -30,7 +30,7 @@ const layers = [
     short: "La memoria",
     queEs:
       "El almacenamiento persistente de la información. Los datos siguen ahí aunque cierres el navegador.",
-    hoy: "Hoy el CV muestra la información. En el bonus, una tabla de Supabase guarda cada mensaje.",
+    hoy: "Hoy el CV muestra la información. En la tarea para el hogar, una tabla de Supabase guarda cada mensaje.",
     ejemplo:
       "Cada fila es un lead: nombre, email y mensaje. Mañana sigue en la tabla.",
   },
@@ -109,7 +109,7 @@ export function ArchitectureDiagram() {
             Web app con persistencia
           </p>
           <p className="mt-2 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
-            Además guarda datos. En el bonus, el mismo CV deja el mensaje en Supabase.
+            Además guarda datos. En la tarea para el hogar, el mismo CV deja el mensaje en Supabase.
           </p>
         </div>
       </div>

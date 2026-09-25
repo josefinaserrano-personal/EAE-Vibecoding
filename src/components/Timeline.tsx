@@ -69,7 +69,7 @@ export function Timeline({
                     }`}
                   >
                     <span className="block text-[11px] font-semibold leading-none">
-                      {block.kind === "bonus" ? "Bonus" : `Bloque ${block.number}`}
+                      {block.chip ?? (block.kind === "bonus" ? "Bonus" : `Bloque ${block.number}`)}
                     </span>
                     <span
                       className={`mt-1 block text-[10px] tabular-nums leading-none ${

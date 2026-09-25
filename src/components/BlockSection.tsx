@@ -138,9 +138,10 @@ export function BlockSection({ block }: { block: Block }) {
     >
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20">
         <p className="text-sm font-medium text-indigo-700 dark:text-indigo-300">
-          {block.kind === "bonus"
-            ? `Bonus • ${block.start} – ${block.end} • si quieres probarlo`
-            : `Bloque ${block.number} • ${block.start} – ${block.end}`}
+          {block.kicker ??
+            (block.kind === "bonus"
+              ? `Bonus • ${block.start} – ${block.end} • si quieres probarlo`
+              : `Bloque ${block.number} • ${block.start} – ${block.end}`)}
         </p>
         <h2
           id={`${block.id}-title`}

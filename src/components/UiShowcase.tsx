@@ -276,7 +276,7 @@ function AccordionDemo() {
 const tabPanels = {
   Experiencia: "Tres puestos, del más reciente al más antiguo, con una línea de impacto cada uno.",
   Proyectos: "Dos o tres proyectos. El detalle largo vive en un modal, no en la página.",
-  Contacto: "Un formulario corto: nombre, email y mensaje. En el bonus se puede conectar a Supabase.",
+  Contacto: "Un formulario corto: nombre, email y mensaje. En la tarea para el hogar se puede conectar a Supabase.",
 }
 
 function TabsDemo() {
